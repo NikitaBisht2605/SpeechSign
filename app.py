@@ -53,7 +53,7 @@ def login():
                 user_id = user_info['users'][0]['localId']
                 if user_info['users'][0]['emailVerified']:
                     session['logged_in'] = True
-                    return redirect('https://nikitabisht2605-speechsign-model-app-om5xln.streamlit.app/?user='+user_id)
+                    return redirect('https://speechsign.streamlit.app/?user='+user_id)
                 else:
                     unsuccessful = "Please verify your Email ID."
                     auth.send_email_verification(user_token)
